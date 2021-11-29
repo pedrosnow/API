@@ -32,5 +32,27 @@ class Menu extends  Model {
 
     }
 
+    public static function verficiarProduto($id){
+
+        $query = DB::table('produto as p')
+        ->select('p.complemento')
+        ->where('p.id_produto', '=', $id)
+        ->get();
+
+        return $query;
+        
+    }
+
+    public static function complementos(){
+
+        $query = DB::table('complemento as c')
+        ->select('c.complemento')
+        ->get();
+
+        return $query;
+
+
+    }
+
 
 }
