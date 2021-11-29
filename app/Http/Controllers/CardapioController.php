@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
-use App\Models\User;
+use App\Models\Menu;
 
-class UserController extends Controller
+class CardapioController extends Controller
 {
     
     public function __construct()
@@ -14,10 +14,14 @@ class UserController extends Controller
     }
 
     
-    public function MenuAcai()
-    {
-        return response()->json(auth()->user());
+    public function menuAcai()
+    {  
+        $menu_acai = Menu::acai();
+
+        return response()->json($menu_acai);
     }
+
+
 
    
 
