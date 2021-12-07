@@ -19,7 +19,7 @@ class CardapioController extends Controller
     {  
         $menu_acai = Menu::acai();
 
-        return response()->json($menu_acai);
+        return json_encode($menu_acai);
 
     }
 

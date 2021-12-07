@@ -58,4 +58,14 @@ class AuthController extends Controller
             'access_token' => $token,
         ]);
     }
+
+    // public function refresh(){
+
+    //    return $this->respondWithToken($this->auth()->refresh());
+
+    // }
+
+
+
+
 }
